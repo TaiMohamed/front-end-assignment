@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    border: 0.1vw solid dimgray;
+    margin: 2vw 0;
+}
+
+img {
+    width: 100%;
+}
+
+h1, h2 {
+    font-size: 3vw;
+}
+
+blockquote {
+    font-family: serif;
+    font-size: 2vw;
+}
+
+p {
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 2vw;
+}
+
+body {
+    width: 90%;
+    margin: 0.5vw auto;
+    background-color: ghostwhite;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 1vw;
+}
+
+div {
+    display: grid;
+    grid-template: repeat(12, minmax(0.1rem, auto)) / repeat(12, 1fr);
+    grid-gap: 2vw;
+}
+
+div > img {
+    grid-area: 1 / 1 / span 12 / span 5;
+}
+
+div > h2 {
+    grid-area: 1 / 6 / 3 / span 7;
+}
+
+div > blockquote {
+    grid-area: 3 / 6 / span 9 / span 7;
+}
+
+div > p {
+    grid-area: 12 / 6 / span 1 / span 7;
+}
+
+@media (max-width: 720px) {
+
+    hr {
+        border: 1px solid dimgray;
+    }
+
+    h1, h2 {
+        font-size: 2rem;
+    }
+
+    blockquote, p {
+        font-size: 1rem;
+    }
+
+    div {
+        grid-template: repeat(4, auto) / 1fr;
+        grid-gap: 2vw;
+    }
+
+    div > img {
+        grid-area: 2 / 1 / span 1 / span 1;
+    }
+
+    div > h2 {
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+
+    div > blockquote {
+        grid-area: 3 / 1 / span 1 / span 1;
+    }
+
+    div > p {
+        grid-area: 4 / 1 / span 1 / span 1;
+    }
+}

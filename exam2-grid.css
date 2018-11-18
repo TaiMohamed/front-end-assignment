@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+li {
+    display: inline-block;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+}
+
+body {
+    margin: 0.5rem;
+    display: grid;
+    grid-gap: 2rem;
+    justify-content: stretch;
+    grid-template: auto / 1fr;
+}
+
+header {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+header > h1 {
+    border: 1px solid grey;
+    padding: 1rem 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header > ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0.5rem 0;
+    justify-content: space-around;
+}
+
+header > form input[type="search"] {
+    width: 100%;
+    height: 2.5rem;
+    font-size: 1.5rem;
+}
+
+section {
+    border: 1px solid grey;
+    padding: 0.5rem 0;
+}
+
+section > ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+}
+
+nav:nth-child(3) > ul, nav:nth-last-child(2) > ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5rem;
+    justify-content: space-around;
+}
+
+main {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+nav:nth-last-child(2) {
+    grid-row: 4 / 5;
+}
+
+aside {
+    height: 3rem;
+    border: 1px solid grey;
+    padding: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    a, p, figcaption {
+        font-size: 2vw;
+    }
+
+    h6 {
+        font-size: 1.5vw;
+    }
+
+    body {
+        width: 80%;
+        margin: 0.5rem auto;
+        grid-template: auto / repeat(6, 1fr);
+        grid-gap: 2vw 1vw;
+    }
+
+    header {
+        grid-column: 1 / span 6;
+        grid-template-columns: repeat(13, 1fr);
+    }
+
+    header > h1 {
+        grid-area: 1 / 1 / span 2 / span 5;
+        font-size: 4vw;
+        align-self: center;
+        padding: 1vw 2vw;
+    }
+
+    header > ul {
+        grid-area: 1 / 9 / span 1 / span 5;
+        padding: 0.5vw 0;
+        justify-content: space-between;
+    }
+
+    header > form {
+        grid-area: 2 / 10 / span 1 / span 4;
+    }
+
+    header > form > input[type="search"] {
+        height: 4vw;
+        font-size: 3vw;
+    }
+
+    section {
+        grid-column: 1 / span 6;
+        padding: 0.5vw;
+    }
+
+    nav:nth-child(3) {
+        grid-area: 3 / 1 / span 2 / span 1;
+    }
+
+    nav:nth-child(3) > ul, nav:nth-last-child(2) > ul {
+        grid-template-columns: 1fr;
+        grid-gap: 1vw;
+        justify-content: start;
+    }
+
+    nav:nth-child(3) > ul > li, nav:nth-last-child(2) > ul > li {
+        text-align: left;
+    }
+
+    main {
+        grid-area: 3 / 2 / span 2 / span 4;
+        grid-gap: 1vw;
+    }
+
+    nav:nth-last-child(2) {
+        grid-area: 3 / 6 / span 1 / span 1;
+    }
+
+    aside {
+        grid-area: 4 / 6 / span 1 / span 1;
+        height: auto;
+    }
+}

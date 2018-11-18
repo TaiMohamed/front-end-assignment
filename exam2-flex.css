@@ -1,0 +1,204 @@
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 8px;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    width: 100%;
+    text-align: center;
+}
+
+li {
+    display: flex;
+}
+
+ul {
+    padding: 0;
+}
+
+div {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    border: 1px solid black;
+    margin-bottom: 1rem;
+}
+
+div:first-child header {
+    display: flex;
+    align-items: center;
+    width: 35%;
+}
+
+div:first-child header h1 {
+    border: 1px solid grey;
+    margin: 0 1rem;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem 0;
+}
+
+div:first-child section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    width: 40%;
+    margin-right: 1rem;
+}
+
+div:first-child section ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+div:first-child section form {
+    display: flex;
+    justify-content: flex-end;
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+
+div:first-child section form input[type="search"] {
+    width: 80%;
+    font-size: 1.5rem;
+}
+
+div:nth-child(2) ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+div:last-child {
+    border: none;
+    margin-bottom: 0;
+}
+
+div:last-child nav {
+    width: 15%;
+    border: 1px solid grey;
+    padding-left: 0.5rem;
+}
+
+div:last-child nav ul {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+div:last-child nav ul li {
+    display: inline;
+}
+
+div:last-child main {
+    width: 66%;
+    justify-content: space-between;
+}
+
+div:last-child main section:last-child {
+    border: 1px solid grey;
+    padding: 0 0.5rem;
+}
+
+div:last-child > section {
+    width: 15%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+div:last-child > section nav {
+    width: auto;
+    flex: 1 1 auto;
+    padding-left: 0.5rem;
+}
+
+div:last-child > section aside {
+    width: auto;
+    border: 1px solid grey;
+    flex: 1 1 auto;
+    padding-left: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 720px) {
+    a {
+        font-size: 1.2rem;
+    }
+
+    div {
+        flex-flow: column nowrap;
+    }
+
+    div:first-child header {
+        align-self: center;
+        width: 90%;
+        margin-top: 0.5rem;
+    }
+
+    div:first-child section {
+        width: auto;
+        margin: 0 0.5rem;
+    }
+
+    div:first-child section ul {
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    div:first-child section ul li {
+        flex: 1 1 auto;
+    }
+
+    div:first-child section form {
+        margin-bottom: 0.5rem;
+    }
+
+    div:first-child section form input[type="search"] {
+        width: 100%;
+    }
+
+    div:nth-child(2) ul {
+        flex-flow: row wrap;
+    }
+
+    div:nth-child(2) ul li {
+        flex: 1 1 auto;
+    }
+
+    div:last-child nav {
+        width: auto;
+        padding-left: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    div:last-child nav ul {
+        flex-flow: row wrap;
+    }
+
+    div:last-child nav ul li {
+        display: flex;
+        width: 33.33%;
+    }
+
+    div:last-child main {
+        width: 100%;
+    }
+
+    div:last-child > section {
+        width: auto;
+        margin-top: 0.5rem;
+    }
+
+    div:last-child > section nav {
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+}
